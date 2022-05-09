@@ -6,15 +6,16 @@ int main()
 	int dataSourceChoice = 1; // E-book reading progress by percent or e-book page number 
 	double numPaperPages = 0, numEbookPages = 0, yourPaperPage = 0, yourEbookPage = 0, yourProgressPercent = 0;
 
-	std::cout << "             Reading Progress Calculator                   \n";
+	std::cout << "----------------Reading Progress Calculator----------------\n";
 	std::cout << "Convert your e-book reading progress to the printed version\n";
 	std::cout << "-----------------------------------------------------------\n\n";
 
 	while (programmeLoop == 1) {
 
-		std::cout << "Calculate paper page from e-book page number [1]\n";
-		std::cout << "Calculate paper page from e-book progress %  [2]\n";
-
+		std::cout << "Calculate printed page number from e-book page number [1]\n";
+		std::cout << "Calculate printed page number from e-book progress %  [2]\n";
+		std::cout << "Calculate reading progress % based on page numbers    [3]\n";
+		std::cout << "\nYour input: ";
 		std::cin >> dataSourceChoice;
 
 		if (dataSourceChoice == 1) {
@@ -50,6 +51,7 @@ int main()
 
 			std::cout << "Do you want to start a new calculation? [1] Yes, [0] No: ";
 			std::cin >> programmeLoop;
+			std::cout << "\n\n";
 
 			if (std::cin.fail()) {
 				std::cerr << "Input error. Please choose option [1] or [2].\n";
@@ -81,6 +83,7 @@ int main()
 
 			std::cout << "Do you want to start a new calculation? [1] Yes, [0] No: ";
 			std::cin >> programmeLoop;
+			std::cout << "\n\n";
 
 			if (std::cin.fail()) {
 				std::cerr << "Input error\n";
@@ -89,11 +92,43 @@ int main()
 
 
 		}
+		else if (dataSourceChoice == 3) {
+			std::cout << "\n\nTotal page number of your book: ";
+			std::cin >> numEbookPages;
+
+			if (std::cin.fail()) {
+				std::cerr << "Input error\n";
+				return EXIT_FAILURE;
+			}
+
+			std::cout << "\nYour current book page: ";
+			std::cin >> yourEbookPage;
+
+			if (std::cin.fail()) {
+				std::cerr << "Input error\n";
+				return EXIT_FAILURE;
+			}
+
+			yourProgressPercent = (numEbookPages / 100) * yourEbookPage;
+
+
+			std::cout << "\nYour have read " << yourProgressPercent << " % of your book.\n\n";
+
+			std::cout << "Do you want to start a new calculation? [1] Yes, [0] No: ";
+			std::cin >> programmeLoop;
+			std::cout << "\n\n";
+
+			if (std::cin.fail()) {
+				std::cerr << "Input error\n";
+				return EXIT_FAILURE;
+			}
+
+		}
+
 		else {
 			std::cerr << "Input error. Please choose option [1] or [2].\n";
 			return EXIT_FAILURE;
 		}
-
 
 
 	} // End of programme loop
