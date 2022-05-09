@@ -3,7 +3,7 @@
 int main()
 {
 	int programmeLoop = 1; // Keeps it running
-	int dataSourceChoice = 1; // E-book reading progress by percent or e-book page number 
+	int dataSourceChoice = 1; // Choose your calculation
 	double numPaperPages = 0, numEbookPages = 0, yourPaperPage = 0, yourEbookPage = 0, yourProgressPercent = 0;
 
 	std::cout << "----------------Reading Progress Calculator----------------\n";
@@ -125,8 +125,7 @@ int main()
 		}
 
 		else {
-			std::cerr << "Input error. Please choose option [1] or [2].\n";
-			return EXIT_FAILURE;
+			std::cerr << "Input error. Please choose option 1, 2 or 3.\n\n";
 		}
 
 
