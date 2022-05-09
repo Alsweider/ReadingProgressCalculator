@@ -109,8 +109,7 @@ int main()
 				return EXIT_FAILURE;
 			}
 
-			yourProgressPercent = (numEbookPages / 100) * yourEbookPage;
-
+			yourProgressPercent = (100 / numEbookPages) * yourEbookPage;
 
 			std::cout << "\nYour have read " << yourProgressPercent << " % of your book.\n\n";
 
