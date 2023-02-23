@@ -1,4 +1,9 @@
 # Reading Progress Calculator
+
+Check out the new ReadCalc, it comes with a graphical user interface, it is klickibunti: [ReadCalc](https://github.com/Alsweider/ReadCalc)
+
+---
+
 E-readers often have either virtual page numbers that differ from the printed book or they just display your reading progress as a percentage. 
 Maybe you want to switch to the printed version of a book or you want to track your reading progress on Goodreads but your e-reader doesn't show the actual page numbers.
 If you want to find out which page you would be reading on in the printed book right now, you can use this console tool. 
